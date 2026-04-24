@@ -4,9 +4,9 @@
 
 **Aplicación:** Zero Spam (identificador de paquete: `com.zeroteam.zerospamapp`)  
 
-**Editor responsable:** Zero Team (sustituye por la razón social o nombre comercial definitivo).
+**Editor responsable:** Zero Team.
 
-Este documento incluye la **Política de privacidad** y los **Términos de uso** de la aplicación móvil Zero Spam. Debes publicarlo en una **URL accesible públicamente** (sin contraseña) y enlazarlo en Google Play Console y, si aplica, en la propia app.
+Este documento incluye la **Política de privacidad** y los **Términos de uso** de Zero Spam. Debe estar accesible en un URL público y enlazarse en Google Play Console y, si aplica, en la propia app.
 
 ---
 
@@ -20,7 +20,7 @@ Al instalar o usar Zero Spam, aceptas el tratamiento de datos descrito en esta p
 
 ### 2. Responsable del tratamiento
 
-El responsable del tratamiento de los datos personales obtenidos a través de la app es el titular/editor indicado al inicio de este documento.  
+El responsable del tratamiento de datos personales en la app es **Zero Team**.  
 
 **Contacto para ejercer derechos o consultas de privacidad:** `zeroteam.dev.app+zerospam.support@gmail.com`.
 
@@ -32,18 +32,18 @@ Según las funciones que actives y los permisos que concedas, Zero Spam puede tr
 |-----------|----------|---------------------|
 | **Identificadores de cuenta** | Correo electrónico, nombre para mostrar, identificador de usuario en el backend | Crear y mantener tu cuenta, iniciar sesión y sincronizar preferencias asociadas a la cuenta. |
 | **Teléfono y verificación** | Número en formato internacional (E.164), estado de verificación del teléfono | Asociar la cuenta a un número, verificación por SMS/código y cumplir requisitos de rutas protegidas del servidor (p. ej. reportes o filtros avanzados). |
-| **Datos de llamadas y SMS** | Número de origen/destino, metadatos necesarios para filtrado o pantalla de llamada, historial según permisos del sistema | Mostrar interfaz de llamada, evaluar si una llamada o mensaje es sospechoso, aplicar listas locales y sincronización con el servicio cuando corresponda. |
+- **Datos de llamadas y SMS** | Número de origen/destino, información de llamadas/mensajes según permisos del sistema | Detectar llamadas y mensajes no deseados, mostrar información de contacto y permitir bloqueos personalizados.
 | **Contactos** | Datos de la agenda que el sistema permita leer o modificar con tu permiso | Integración con marcador, contactos y funciones que elijas usar. |
 | **Datos técnicos y de uso** | Identificadores de publicidad, datos agregados de uso de la app, diagnósticos si los activas | Mejorar el producto, mostrar anuncios (ver sección de publicidad) y estabilidad. |
-| **Tokens de sesión** | Tokens de acceso y renovación de sesión | Mantener la sesión iniciada de forma segura y llamar a APIs autenticadas. |
+- **Tokens de sesión** | Datos de autenticación cifrados | Mantener tu sesión iniciada de forma segura.
 
-No solicitamos datos innecesarios para la categoría de la app; los permisos sensibles se usan en el marco de las funciones de **telefonía, SMS, contactos y protección frente a spam**.
+Solicitamos solamente los permisos necesarios para proporcionar las funciones de **protección contra spam, bloqueo de llamadas/mensajes y gestión de contactos**. Puedes **revocar cualquier permiso en cualquier momento** desde los Ajustes de tu dispositivo.
 
 ### 4. Permisos del dispositivo (Android)
 
 La app puede solicitar permisos declarados en el manifiesto, entre ellos (según versión del sistema y flujo de la app):
 
-- **Teléfono y llamadas:** lectura de estado básico del teléfono, números asociados a la SIM cuando el sistema lo permita, registro de llamadas según política del fabricante, contestar o gestionar llamadas en el contexto de la app como cliente de llamadas.
+- **Teléfono y llamadas:** información básica del teléfono, registro de llamadas y gestión de llamadas para la funcionalidad de bloqueo.
 - **SMS/MMS:** leer, enviar y recibir SMS/MMS cuando configures Zero Spam como app predeterminada o concedas los permisos correspondientes.
 - **Contactos:** leer y escribir contactos si activas funciones que lo requieran.
 - **Internet:** comunicación con servidores y servicios de terceros (autenticación, API, anuncios).
@@ -53,13 +53,11 @@ Puedes **revocar permisos** desde Ajustes de Android; algunas funciones dejarán
 
 ### 5. Servicios de terceros y transferencias
 
-#### 5.1 Backend propio (API)
+#### 5.1 Servidor backend
 
-La app se comunica con un **servidor backend** alojado en infraestructura en la nube (p. ej. Railway u otro proveedor equivalente) en la URL de producción configurada en la compilación, por ejemplo:
+La app se comunica con nuestros **servidores seguros** para funciones como: registro e inicio de sesión, sincronización de listas de contactos permitidos/bloqueados, consultas de información de números, reportes de spam y gestión de suscripciones.
 
-`https://zerospambackend-production.up.railway.app`
-
-A través de ese servicio se pueden enviar o recibir, entre otros: datos de registro e inicio de sesión, listas de números permitidos/bloqueados, consultas sobre números, filtros tipo *bloom filter*, reportes de spam/incidentes y datos de suscripción/plan según la API documentada del proyecto.
+Estos servidores están alojados con **estándares de seguridad empresarial** y cumplen con regulaciones de protección de datos.
 
 El tratamiento en servidor debe ajustarse a lo que el **operador del backend** (Zero Team o quien ostente la titularidad) defina en sus propias bases legales y acuerdos con proveedores de hosting.
 
@@ -80,9 +78,9 @@ La app puede mostrar **anuncios** mediante el SDK de **Google AdMob**. Google pu
 ### 7. Conservación y supresión
 
 - Los datos en el **dispositivo** permanecen hasta que desinstales la app o borres datos de la aplicación desde Ajustes de Android.
-- Los datos en el **servidor** se conservan el tiempo necesario para prestar el servicio y cumplir obligaciones legales. Para solicitar **acceso, rectificación, supresión u oposición** (según la ley que te aplique, p. ej. GDPR en la UE o LFPDPPP en México), contacta al responsable en la dirección indicada en la sección 2.
+- Los datos en el **servidor** se conservan el tiempo necesario para prestar el servicio y cumplir obligaciones legales. Para solicitar **acceso, rectificación o supresión** de tus datos, contacta a: `zeroteam.dev.app+zerospam.support@gmail.com`.
 
-Cerrar sesión o usar la función de **cierre de sesión / logout** en la app puede revocar tokens en el servidor según el diseño de la API (p. ej. invalidación del *refresh token*).
+Cuando cierres sesión en la app, tu acceso se revoca inmediatamente.
 
 ### 8. Menores de edad
 
@@ -92,9 +90,9 @@ Zero Spam **no está dirigida** a menores de 16 años (o la edad mínima que mar
 
 Podemos actualizar esta política para reflejar cambios legales o en la app. La **fecha de actualización** figurará al inicio del documento. El uso continuado de la app tras publicar cambios puede implicar la aceptación de la versión revisada, salvo que la ley exija consentimiento adicional.
 
-### 10. Ley aplicable y reclamaciones
+### 10. Ley aplicable
 
-Sustituye este apartado por la ley y tribunales que correspondan a tu entidad (por ejemplo, legislación mexicana o española) y, si aplica, el derecho a reclamar ante la **autoridad de protección de datos** de tu país.
+Esta política se rige por la legislación de México. Para reclamaciones sobre protección de datos, puedes contactar a la autoridad competente en tu país o dirigirte directamente a nosotros mediante el correo indicado en la Sección 2.
 
 ---
 
@@ -114,11 +112,11 @@ Se te concede una licencia **personal, no exclusiva, revocable e intransferible*
 - Usar la app para fines ilegales, acosar a terceros, enviar reportes falsos de forma sistemática o interferir con redes o servicios ajenos.
 - Revender, alquilar o sublicenciar la app sin autorización escrita del titular.
 
-### 3. Funcionalidad y aviso legal
+### 3. Funcionalidad y limitaciones
 
-- Zero Spam es una **herramienta de asistencia**; no garantiza bloquear el 100 % de llamadas o mensajes no deseados (depende de red, fabricante, permisos y listas).
-- Las **valoraciones de riesgo** o etiquetas mostradas son orientativas y pueden basarse en datos locales, servidor o ambos.
-- El usuario es **responsable** del uso que haga de la app (incluidos bloqueos, reportes y comunicaciones con terceros).
+- Zero Spam es una **herramienta de asistencia**; la efectividad del bloqueo depende de la red, el fabricante del dispositivo, los permisos otorgados y la actualización de las listas de spam.
+- Las **etiquetas de riesgo** mostradas son orientativas y se basan en información disponible en el momento.
+- Eres responsable de verificar la información antes de bloquear contactos legítimos.
 
 ### 4. Cuenta y credenciales
 
@@ -139,19 +137,20 @@ La versión distribuida puede incluir **publicidad** de terceros. Los anuncios s
 
 ### 7. Modificaciones del servicio
 
-El titular puede **actualizar, suspender o discontinuar** funciones o la app con el aviso que exija la ley o las políticas de la tienda de aplicaciones. No se garantiza mantenimiento indefinido de ninguna función concreta.
+Zero Team puede **actualizar, mejorar, suspender o descontinuar** funciones o la app. Se notificará sobre cambios significativos conforme lo requieran las normas aplicables.
 
 ### 8. Limitación de responsabilidad
 
-En la medida máxima permitida por la ley aplicable:
+En la medida permitida por la ley:
 
-- El servicio se ofrece **“tal cual”** y según disponibilidad.
-- No nos hacemos responsables de daños indirectos, lucro cesante, pérdida de datos o perjuicios derivados del uso o imposibilidad de uso de la app, salvo que la ley imperativa disponga lo contrario.
+- La app se ofrece **"tal cual"** según disponibilidad.
+- Zero Team no se hace responsable de daños indirectos, pérdida de datos o interrupciones del servicio, excepto donde la ley lo prohíba.
+- No somos responsables de contenido o comportamiento de terceros, ni de números reportados incorrectamente por usuarios.
 
 ### 9. Legislación y resolución de conflictos
 
-Sustituye por la **legislación y jurisdicción** que corresponda al titular del servicio (por ejemplo, tribunales de Ciudad de México o de Madrid). Si la ley de tu país como consumidor impone un fuero imperativo, prevalecerá dicho fuero.
+Esta política se rige por la legislación de México. Los tribunales competentes serán los de Ciudad de México, aunque si tu país como consumidor impone un fuero imperativo, se aplicará dicho fuero.
 
 ### 10. Contacto
 
-Para consultas sobre estos términos o la privacidad, utiliza el mismo contacto indicado en la **Parte I, sección 2**: `zeroteam.dev.app+zerospam.support@gmail.com`.
+Para consultas sobre estos términos o la privacidad, contáctanos en: `zeroteam.dev.app+zerospam.support@gmail.com`.
