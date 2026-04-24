@@ -22,7 +22,7 @@ Al instalar o usar Zero Spam, aceptas el tratamiento de datos descrito en esta p
 
 El responsable del tratamiento de los datos personales obtenidos a través de la app es el titular/editor indicado al inicio de este documento.  
 
-**Contacto para ejercer derechos o consultas de privacidad:** sustituye por un correo electrónico o formulario de contacto válido (por ejemplo: `privacidad@tudominio.com`).
+**Contacto para ejercer derechos o consultas de privacidad:** `zeroteam.dev.app+zerospam.support@gmail.com`.
 
 ### 3. Datos que puede tratar la aplicación
 
@@ -154,8 +154,4 @@ Sustituye por la **legislación y jurisdicción** que corresponda al titular del
 
 ### 10. Contacto
 
-Para consultas sobre estos términos o la privacidad, utiliza el mismo contacto indicado en la **Parte I, sección 2** (sustituye el marcador de posición por datos reales antes de publicar).
-
----
-
-**Nota para el equipo:** antes de publicar en Play Store, reemplaza los textos “sustituye por…”, el correo de contacto y la legislación aplicable. Opcionalmente añade un enlace a `Politicas.md` hospedado en tu sitio web o repositorio público estable.
+Para consultas sobre estos términos o la privacidad, utiliza el mismo contacto indicado en la **Parte I, sección 2**: `zeroteam.dev.app+zerospam.support@gmail.com`.
